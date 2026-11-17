@@ -35,7 +35,7 @@ button.b,.b{font:inherit;color:var(--tx);background:rgba(255,255,255,.04);border
 .card h2 em{font-style:normal;letter-spacing:0;text-transform:none;font-weight:400}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;margin-top:16px}
 .st{position:relative;overflow:hidden;background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:16px;border-top:2px solid var(--c);box-shadow:0 -10px 24px -14px var(--c)}
-.ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent);border:1px solid color-mix(in srgb,var(--c) 32%,transparent)}
+.ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:var(--c);background:rgba(255,255,255,.06);background:color-mix(in srgb,var(--c) 14%,transparent);border:1px solid rgba(255,255,255,.15);border-color:color-mix(in srgb,var(--c) 32%,transparent)}
 .lb{margin-top:12px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
 .vl{font-size:27px;font-weight:600;line-height:1.15;margin-top:2px}
 .mb{height:5px;border-radius:3px;background:rgba(255,255,255,.07);margin-top:10px;overflow:hidden}
@@ -46,18 +46,18 @@ button.b,.b{font:inherit;color:var(--tx);background:rgba(255,255,255,.04);border
 .tabs button[aria-selected=true]{color:#04121a;background:linear-gradient(135deg,#00f0ff,#7aa8ff);border-color:transparent;font-weight:600;box-shadow:0 0 22px rgba(0,240,255,.3)}
 .tabs small{display:block;font-size:11px;opacity:.85}
 .cds{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
-.cd{border:1px solid color-mix(in srgb,var(--c) 38%,transparent);border-radius:12px;padding:11px;background:linear-gradient(160deg,color-mix(in srgb,var(--c) 9%,#0b1020),#0b1020 70%)}
+.cd{border:1px solid rgba(255,255,255,.15);border-color:color-mix(in srgb,var(--c) 38%,transparent);border-radius:12px;padding:11px;background:#0b1020;background:linear-gradient(160deg,color-mix(in srgb,var(--c) 9%,#0b1020),#0b1020 70%)}
 .cd b{color:var(--c);font-size:13px}.cd .t{font-size:19px;font-weight:600;margin:2px 0 6px}
 input[type=date],input[type=number]{font:inherit;color:var(--tx);background:#080c1a;border:1px solid var(--bd);border-radius:8px;padding:5px 8px;color-scheme:dark;width:100%}
 .pace{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:13px;color:var(--dim);margin-bottom:12px}
 .pace b{color:var(--tx);font-weight:500}
 .th{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
-.t1{text-align:center;border-radius:14px;padding:12px 6px;cursor:pointer;background:linear-gradient(180deg,color-mix(in srgb,var(--c) 7%,#0c1124),#0b1020);border:1px solid color-mix(in srgb,var(--c) 22%,transparent);transition:transform .15s,box-shadow .15s}
+.t1{text-align:center;border-radius:14px;padding:12px 6px;cursor:pointer;background:#0b1020;background:linear-gradient(180deg,color-mix(in srgb,var(--c) 7%,#0c1124),#0b1020);border:1px solid rgba(255,255,255,.1);border-color:color-mix(in srgb,var(--c) 22%,transparent);transition:transform .15s,box-shadow .15s}
 .t1:hover{transform:translateY(-2px)}
 .t1.sel{box-shadow:0 0 26px color-mix(in srgb,var(--c) 45%,transparent),inset 0 0 0 1px var(--c)}
 .nm{color:var(--c);font-weight:700;font-size:13px}
 .tube{position:relative;height:210px;width:48px;margin:10px auto;background:linear-gradient(90deg,#050813,#0b1226,#050813);border:1px solid var(--bd);border-radius:24px;overflow:hidden}
-.tube .f{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,var(--c),color-mix(in srgb,var(--c) 65%,#fff));box-shadow:0 0 22px var(--c);transition:height .4s}
+.tube .f{position:absolute;bottom:0;left:0;right:0;background:var(--c);background:linear-gradient(0deg,var(--c),color-mix(in srgb,var(--c) 65%,#fff));box-shadow:0 0 22px var(--c);transition:height .4s}
 .tube .k{position:absolute;left:0;width:12px;border-top:1px solid rgba(255,255,255,.35)}.tube .k.h{width:24px}
 .badge{display:inline-block;font-size:10.5px;font-weight:600;letter-spacing:.05em;padding:2px 8px;border-radius:99px;border:1px solid var(--c);color:var(--c)}
 .badge.cc{background:var(--c);color:#04101a;animation:pl 1.6s infinite}
@@ -69,182 +69,11 @@ input[type=date],input[type=number]{font:inherit;color:var(--tx);background:#080
 .clock{font-size:58px;font-weight:600;line-height:1;color:var(--c);text-shadow:0 0 18px var(--c)}
 .ctl{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.ctl label{font-size:12px;color:var(--dim);display:flex;gap:6px;align-items:center}.ctl input{width:62px}
 .pri{background:var(--c)!important;color:#04101a!important;font-weight:600;border-color:transparent}
-.mod{border-left:3px solid var(--c);border-radius:12px;padding:12px 14px;margin-top:10px;background:linear-gradient(90deg,color-mix(in srgb,var(--c) 8%,#0b1020),#0b1020 60%)}
+.mod{border-left:3px solid var(--c);border-radius:12px;padding:12px 14px;margin-top:10px;background:#0b1020;background:linear-gradient(90deg,color-mix(in srgb,var(--c) 8%,#0b1020),#0b1020 60%)}
 .mod h3{margin:0;font-size:14px;color:var(--c)}.mod p{margin:2px 0 6px;color:var(--dim);font-size:12.5px}
 .mod label{display:flex;gap:10px;align-items:flex-start;padding:4px 0;cursor:pointer}
-.mod input{appearance:none;width:18px;height:18px;margin-top:1px;flex:none;border:1.5px solid color-mix(in srgb,var(--c) 60%,transparent);border-radius:6px;background:transparent;cursor:pointer;display:grid;place-items:center;transition:background .15s,box-shadow .15s}
+.mod input{appearance:none;width:18px;height:18px;margin-top:1px;flex:none;border:1.5px solid var(--c);border-color:color-mix(in srgb,var(--c) 60%,transparent);border-radius:6px;background:transparent;cursor:pointer;display:grid;place-items:center;transition:background .15s,box-shadow .15s}
 .mod input:checked{background:var(--c);box-shadow:0 0 10px var(--c)}
 .mod input:checked::after{content:"";width:5px;height:9px;border:solid #04101a;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
 .mod input:checked+span{color:var(--dim);text-decoration:line-through}
-.hist{display:grid;grid-template-columns:90px repeat(5,1fr);gap:8px;align-items:center;font-size:12px}
-.hist .h{color:var(--dim);text-align:center}.hist .c{font-weight:600;color:var(--c)}
-.hist .cell{height:26px;border-radius:6px;background:rgba(255,255,255,.05);position:relative;overflow:hidden}
-.hist .cell i{position:absolute;inset:0 auto 0 0;background:var(--c);opacity:.85}
-.hist .cell span{position:relative;display:block;text-align:center;line-height:26px;font-size:11px}
-details summary{cursor:pointer;font-weight:600}details ul{color:var(--dim);padding-left:20px;margin:10px 0 0}details li{margin:4px 0}
-.msg{min-height:18px;font-size:12px;color:#22ff9a;margin-top:10px}
-.view{display:none}.view.on{display:block}
-@media(max-width:760px){.app{grid-template-columns:58px 1fr}aside{padding:14px 6px}.brand span,.nav span,.side-foot{display:none}.nav{justify-content:center;padding:10px 0;border-left:0}main{padding:0 14px 40px}header{margin:0 -14px;padding-left:14px;padding-right:14px}.search{margin-left:0;min-width:0;flex:1}.tube{width:32px;height:170px}.clock{font-size:44px}.nm{font-size:11px}.hist{grid-template-columns:64px repeat(5,1fr)}}
-</style>
-</head>
-<body>
-<div class="app">
-<aside>
- <div class="brand"><div class="logo">🚀</div><span>Mission Control</span></div>
- <button class="nav on" data-go="s-dash"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Dashboard</span></button>
- <button class="nav" data-go="s-syl"><svg class="i" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h10"/></svg><span>Syllabus</span></button>
- <button class="nav" data-go="s-tm"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg><span>Timer</span></button>
- <button class="nav" data-go="s-stats"><svg class="i" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg><span>Stats</span></button>
- <button class="nav" id="nexp"><svg class="i" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg><span>Export</span></button>
- <div class="side-foot">50h weekly target<br>10h per course</div>
-</aside>
-<main>
-<header>
- <div class="crumb"><span>Mission Control /</span> Exam Flight Deck</div>
- <label class="search"><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-5-5"/></svg><input id="q" placeholder="Search syllabus topics" aria-label="Search syllabus topics"></label>
- <button class="b" id="exp">Export Data</button><button class="b" id="imp">Import Data</button><button class="b dng" id="rst">Reset All</button><input id="file" type="file" accept=".json" hidden>
- <div class="av" title="Pilot">PL</div>
-</header>
-<div class="msg" id="msg" role="status"></div>
-
-<div class="tabs" id="tabs" role="tablist" aria-label="Study weeks"></div>
-<section id="s-dash" class="view on">
-<div class="stats" id="stats"></div>
-<details class="card" style="padding:14px 18px"><summary>Flight manual: how this dashboard works</summary><ul>
-<li><b>Fuel gauge</b>: total hours for the selected week against the 50-hour target, with the daily pace you still need.</li>
-<li><b>Thrusters</b>: each course has a 10.0-hour quota. Use ±0.5h to adjust, or click a thruster to aim the timer at it.</li>
-<li><b>Cruise control</b>: a course reaching 10.0h locks in. Move spare time to thrusters that are still low.</li>
-<li><b>Timer</b>: runs Pomodoro or stopwatch for the selected course. Finished focus sessions log themselves; "Log session" adds time early.</li>
-<li><b>Syllabus</b>: tick topics as you finish them. All data saves in this browser, so export a backup before clearing site data.</li></ul></details>
-<div class="card"><h2>Exam countdowns <em>edit any date</em></h2><div class="cds" id="cds"></div></div>
-<div class="card"><h2><span id="wk">Week</span><em class="mono" id="tot"></em></h2>
- <div class="mb" style="--c:#00f0ff;height:10px;margin:0 0 10px"><i id="fgi"></i></div>
- <div class="pace"><b class="mono" id="pace"></b><span class="mono" id="paceS"></span></div>
- <div class="th" id="th"></div></div>
-</section>
-
-<section class="card view" id="s-tm"><h2><span>Deep-work flight timer</span><span class="badge" id="tgt"></span></h2>
- <div class="timer"><div class="clock mono" id="clk">25:00</div>
- <div style="display:grid;gap:10px">
-  <div class="ctl"><button class="b" id="mP">Pomodoro</button><button class="b" id="mS">Stopwatch</button>
-   <label>Focus <input id="fm" type="number" min="1" max="180" value="25"> min</label><label>Break <input id="bm" type="number" min="1" max="60" value="5"> min</label></div>
-  <div class="ctl"><button class="b pri" id="go">Start</button><button class="b" id="rs">Reset</button><button class="b" id="lg">Log session</button><span class="mono" style="font-size:12px;color:var(--dim)" id="ph"></span></div>
- </div></div></section>
-
-<section class="card view" id="s-syl"><h2><span id="syT">Syllabus payload</span><em class="mono" id="syP"></em></h2><div id="sy"></div></section>
-
-<section class="card view" id="s-stats"><h2>Hours by week <em>hours logged per course (10h quota)</em></h2><div class="hist" id="hist"></div></section>
-</main>
-</div>
-
-<script>
-(function(){
-var C=[{id:"EC120",n:"EC 120",sub:"Microeconomics",c:"#00f0ff"},{id:"BU111",n:"BU 111",sub:"Business",c:"#ffb703"},{id:"CS135",n:"CS 135",sub:"Functional Programming",c:"#10b981"},{id:"MATH135",n:"MATH 135",sub:"Algebra & Proofs",c:"#a855f7"},{id:"MATH137",n:"MATH 137",sub:"Calculus 1",c:"#f43f5e"}];
-var W=[
-{l:"Week 1",r:"Nov 16–22",s:"2026-11-16",e:"2026-11-22",t:"Core Foundations & Early Concepts",m:{
-EC120:["Part 1 – Foundations (Chapters 1–4)",["Chapter 1","Chapter 2","Chapter 3","Chapter 4"]],
-BU111:["Estimation & Technological Factors",["Estimation methods","Technological factors","Practice problems"]],
-CS135:["L00–L07 – Values, Functions, Conditional Expressions, Lists & Basic Recursion",["L00–L02 Values & functions","L03–L04 Conditional expressions","L05–L07 Lists & basic recursion"]],
-MATH135:["Course Notes Φ1.1–3.1 (Learning Objectives 0–6)",["Φ1.1–1.x","Φ2.x","Φ3.1","Learning Objectives 0–6 check"]],
-MATH137:["Sections 0.1–2.6 – Pre-Calculus Review, Limits at Infinity & Asymptotes",["0.1–0.x Pre-calculus review","1.x–2.x Limits","Limits at infinity","Asymptotes"]]}},
-{l:"Week 2",r:"Nov 23–29",s:"2026-11-23",e:"2026-11-29",t:"Intermediate Markets & Functions",m:{
-EC120:["Part 2 – Analyzing Markets (Chapters 5–8)",["Chapter 5","Chapter 6","Chapter 7","Chapter 8"]],
-BU111:["Economic Factors – Financial Systems, Stocks, Bonds & Time Value of Money",["Financial systems","Stocks","Bonds","Time value of money"]],
-CS135:["L08–L11 – Efficiency, Multiple Arguments, Accumulative Recursion & Lists of Lists",["L08 Efficiency","L09 Multiple arguments","L10 Accumulative recursion","L11 Lists of lists"]],
-MATH135:["Course Notes Φ3.2–5.3 (Learning Objectives 7–13)",["Φ3.2–3.x","Φ4.x","Φ5.1–5.3","Learning Objectives 7–13 check"]],
-MATH137:["Sections 2.7–3.4 – Continuity, IVT, Derivatives & Differentiation Rules",["Continuity","Intermediate Value Theorem","Derivative definition","Differentiation rules"]]}},
-{l:"Week 3",r:"Nov 30–Dec 6",s:"2026-11-30",e:"2026-12-06",t:"Policy, Strategy & Advanced Calculus",m:{
-EC120:["Part 3 – Applications & Policy Issues (Chapters 9–13)",["Chapter 9","Chapter 10","Chapter 11","Chapter 12","Chapter 13"]],
-BU111:["Social & Political Factors – Demographics, Ownership Forms, Globalization & Ansoff Matrix",["Demographics","Ownership forms","Globalization","Ansoff matrix"]],
-CS135:["L12–L15 – Strings, Binary Trees, General Recursion & General Trees",["L12 Strings","L13 Binary trees","L14 General recursion","L15 General trees"]],
-MATH135:["Course Notes Φ3.6–5.5 (Learning Objectives 11–17)",["Φ3.6","Φ4.x–5.x","Φ5.5","Learning Objectives 11–17 check"]],
-MATH137:["Sections 3.5–4.4 – Linear Approximation, Implicit Differentiation, Related Rates, Extrema & MVT",["Linear approximation","Implicit differentiation","Related rates","Extrema","Mean Value Theorem"]]}},
-{l:"Week 4",r:"Dec 7–12",s:"2026-12-07",e:"2026-12-12",t:"Final Content & Pre-Exam Review",m:{
-EC120:["Part 4 – Industrial Organization & Business Strategy (Chapters 14–17)",["Chapter 14","Chapter 15","Chapter 16","Chapter 17"]],
-BU111:["Comprehensive Framework Review – Diamond-E, Porter's Five Forces & Practice Problem Sets (Dec 12 exam)",["Diamond-E","Porter's Five Forces","Practice problem sets","Full practice run"]],
-CS135:["L16–L20 – Local Definitions, Lambda, Functional Abstraction & Directed Graphs",["L16 Local definitions","L17 Lambda","L18–L19 Functional abstraction","L20 Directed graphs"]],
-MATH135:["Course Notes Φ6.1–10.4 (Learning Objectives 18–46)",["Φ6–7","Φ8","Φ9","Φ10.1–10.4","Learning Objectives 18–46 check"]],
-MATH137:["Sections 4.5–4.10 – Shape of Functions, L'Hôpital's Rule & Optimization",["Shape of functions","L'Hôpital's Rule","Optimization","Practice problems"]]}},
-{l:"Week 5",r:"Dec 13+",s:"2026-12-13",e:"2026-12-20",t:"Exam Period",m:{
-EC120:["Exam prep",["Past papers","Targeted review","Daily practice problems"]],
-BU111:["Exam prep (Dec 12 exam passed)",["Post-exam notes","Reflect on mistakes"]],
-CS135:["Exam prep",["Past papers","Targeted review","Daily practice problems"]],
-MATH135:["Exam prep",["Past papers","Targeted review","Daily practice problems"]],
-MATH137:["Exam kickoff (start of Week 5)",["Exam day","Past papers","Daily practice problems"]]}}];
-var Q=10,TOT=50,KEY="mc-exam-flight-deck-v1";
-function fresh(){return{week:0,sel:"EC120",hours:{},checks:{},dates:{BU111:"2026-12-12",MATH137:"2026-12-13",EC120:"",CS135:"",MATH135:""},timer:{mode:"P",focus:25,brk:5}}}
-var S=fresh(),had=false;
-try{var raw=localStorage.getItem(KEY);if(raw){had=true;var o=JSON.parse(raw);for(var k in o)S[k]=o[k]}}catch(e){}
-if(!had){var n=new Date();W.forEach(function(w,i){if(n>=new Date(w.s+"T00:00:00")&&n<=new Date(w.e+"T23:59:59"))S.week=i})}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
-function $(i){return document.getElementById(i)}
-function say(t){$("msg").textContent=t;setTimeout(function(){if($("msg").textContent===t)$("msg").textContent=""},4000)}
-function getH(w,c){return(S.hours[w]&&S.hours[w][c])||0}
-function addH(w,c,d){S.hours[w]=S.hours[w]||{};S.hours[w][c]=Math.max(0,Math.round((getH(w,c)+d)*100)/100);save()}
-function f1(h){return h.toFixed(1)}
-function cdText(d){if(!d)return"set date";var t=new Date(d+"T09:00:00").getTime()-Date.now();if(isNaN(t))return"set date";if(t<=0)return"EXAM TIME";var s=Math.floor(t/1e3),dd=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60);return dd+"d "+("0"+h).slice(-2)+":"+("0"+m).slice(-2)+":"+("0"+(s%60)).slice(-2)}
-function buildCds(){$("cds").innerHTML=C.map(function(c){return'<div class="cd" style="--c:'+c.c+'"><b>'+c.n+'</b><div class="t mono" id="cd-'+c.id+'">--</div><input type="date" aria-label="'+c.n+' exam date" data-d="'+c.id+'" value="'+(S.dates[c.id]||"")+'"></div>'}).join("");
-document.querySelectorAll("[data-d]").forEach(function(i){i.onchange=function(){S.dates[i.dataset.d]=i.value;save();tick();buildStats()}})}
-function tick(){C.forEach(function(c){var e=$("cd-"+c.id);if(e)e.textContent=cdText(S.dates[c.id])})}
-function buildTabs(){$("tabs").innerHTML=W.map(function(w,i){return'<button role="tab" aria-selected="'+(i===S.week)+'" data-w="'+i+'">'+w.l+'<small class="mono">'+w.r+'</small></button>'}).join("");
-document.querySelectorAll("[data-w]").forEach(function(b){b.onclick=function(){S.week=+b.dataset.w;save();render()}})}
-function total(w){var t=0;C.forEach(function(c){t+=getH(w,c.id)});return t}
-function pace(){var w=W[S.week],now=new Date(),left=Math.max(0,TOT-total(S.week)),st=new Date(w.s+"T00:00:00"),en=new Date(w.e+"T23:59:59"),d;
-if(now<st)d=Math.round((en-st)/864e5);else if(now>en)d=0;else d=Math.max(1,Math.ceil((en-now)/864e5));
-if(left<=0)return["All quotas met. Hold cruise.",""];if(d===0)return["Week closed, "+f1(left)+"h short of target",""];
-return["Required pace: "+f1(left/d)+" hrs/day, "+d+" day"+(d>1?"s":"")+" left",f1(left/d/5)+" hrs/day per subject"]}
-var IC={h:'<path d="M12 7v5l3 2"/><circle cx="12" cy="12" r="9"/>',c:'<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>',x:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4"/>',t:'<path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/>'};
-function buildStats(){var w=W[S.week],tot=total(S.week),cc=0,done=0,all=0,nx=null;
-C.forEach(function(c){if(getH(S.week,c.id)>=Q)cc++;w.m[c.id][1].forEach(function(_,i){all++;if(S.checks[S.week]&&S.checks[S.week][c.id+"-"+i])done++});
-var d=S.dates[c.id];if(d){var t=new Date(d+"T09:00:00")-Date.now();if(t>0&&(!nx||t<nx.t))nx={n:c.n,c:c.c,t:t,d:d}}});
-var nd=nx?new Date(nx.d+"T12:00:00").toLocaleDateString("en-CA",{month:"short",day:"numeric"}):"";
-var cards=[
-["h","#00f0ff","Total hours logged",f1(tot)+"h / 50.0h",Math.min(100,tot/TOT*100),Math.round(tot/TOT*100)+"% of weekly target"],
-["c","#10b981","Cruise control status",cc+" / 5 courses met",cc/5*100,"10.0h quota per course"],
-["x",nx?nx.c:"#ffb703","Next exam countdown",nx?nx.n:"None set",nx?Math.max(4,100-nx.t/864e5/30*100):0,nx?Math.ceil(nx.t/864e5)+" days away, "+nd:"Add a date below"],
-["t","#a855f7","Topics & syllabus",done+" / "+all+" done",all?done/all*100:0,w.l+" checklist"]];
-$("stats").innerHTML=cards.map(function(c){return'<div class="st" style="--c:'+c[1]+'"><div class="ic"><svg class="i" viewBox="0 0 24 24">'+IC[c[0]]+'</svg></div><div class="lb">'+c[2]+'</div><div class="vl mono">'+c[3]+'</div><div class="mb"><i style="width:'+c[4]+'%"></i></div><span class="ch">'+c[5]+'</span></div>'}).join("")}
-function buildTh(){$("th").innerHTML=C.map(function(c){var v=getH(S.week,c.id),p=Math.min(100,v/Q*100),cc=v>=Q,tk="";
-for(var i=1;i<Q;i++)tk+='<div class="k'+(i===5?" h":"")+'" style="bottom:'+i/Q*100+'%"></div>';
-return'<div class="t1'+(S.sel===c.id?" sel":"")+'" style="--c:'+c.c+'" data-t="'+c.id+'" tabindex="0" role="button" aria-label="Aim timer at '+c.n+'"><div class="nm">'+c.n+'</div><div class="tube"><div class="f" style="height:'+p+'%"></div>'+tk+'</div><div class="hrs mono">'+f1(v)+' / 10.0h<br>'+Math.round(p)+'%</div><div style="margin-top:6px"><span class="badge'+(cc?" cc":"")+'">'+(cc?"CRUISE CONTROL":v>0?"BURNING":"STANDBY")+'</span></div><div class="adj"><button class="b" data-a="'+c.id+'" data-v="-0.5" aria-label="Subtract half hour, '+c.n+'">−0.5h</button><button class="b" data-a="'+c.id+'" data-v="0.5" aria-label="Add half hour, '+c.n+'">+0.5h</button></div></div>'}).join("");
-document.querySelectorAll("[data-t]").forEach(function(e){e.onclick=function(){S.sel=e.dataset.t;save();render()};e.onkeydown=function(ev){if(ev.target===e&&(ev.key==="Enter"||ev.key===" ")){ev.preventDefault();e.click()}}});
-document.querySelectorAll("[data-a]").forEach(function(b){b.onclick=function(ev){ev.stopPropagation();addH(S.week,b.dataset.a,+b.dataset.v);render()}})}
-function buildSy(){var w=W[S.week],done=0,all=0;S.checks[S.week]=S.checks[S.week]||{};
-$("sy").innerHTML=C.map(function(c){var m=w.m[c.id],d=0,it=m[1].map(function(t,i){var k=c.id+"-"+i,on=!!S.checks[S.week][k];all++;if(on){d++;done++}return'<label><input type="checkbox" data-k="'+k+'"'+(on?" checked":"")+'><span>'+t+'</span></label>'}).join("");
-return'<div class="mod" style="--c:'+c.c+'"><h3>'+c.n+' <span class="mono" style="font-weight:400;color:var(--dim);font-size:12px">'+d+'/'+m[1].length+'</span></h3><p>'+m[0]+'</p>'+it+'<div class="mb" style="height:4px"><i style="width:'+d/m[1].length*100+'%"></i></div></div>'}).join("");
-$("syT").textContent="Syllabus payload: "+w.l+", "+w.t;$("syP").textContent=done+" / "+all+" topics";
-document.querySelectorAll("[data-k]").forEach(function(i){i.onchange=function(){S.checks[S.week][i.dataset.k]=i.checked;save();buildSy();buildStats()}});filt()}
-function filt(){var q=$("q").value.toLowerCase();document.querySelectorAll(".mod label").forEach(function(l){l.style.display=!q||l.textContent.toLowerCase().indexOf(q)>-1?"":"none"})}
-function buildHist(){var h='<div></div>'+W.map(function(w){return'<div class="h mono">'+w.l.replace("Week ","W")+'</div>'}).join("");
-C.forEach(function(c){h+='<div class="c">'+c.n+'</div>';W.forEach(function(_,i){var v=getH(i,c.id);h+='<div class="cell" style="--c:'+c.c+'"><i style="width:'+Math.min(100,v/Q*100)+'%"></i><span class="mono">'+f1(v)+'</span></div>'})});$("hist").innerHTML=h}
-function cur(){return C.filter(function(c){return c.id===S.sel})[0]}
-function updTgt(){var c=cur(),t=$("tgt");t.textContent="Target: "+c.n+" · "+c.sub;t.style.cssText="--c:"+c.c+";border-color:"+c.c+";color:"+c.c;$("s-tm").style.setProperty("--c",c.c);
-[["mP","P"],["mS","S"]].forEach(function(p){var b=$(p[0]),on=S.timer.mode===p[1];b.style.background=on?c.c:"";b.style.color=on?"#04101a":"";b.style.borderColor=on?c.c:"";b.setAttribute("aria-pressed",on)});$("fm").value=S.timer.focus;$("bm").value=S.timer.brk}
-var T={run:false,phase:"focus",rem:S.timer.focus*60,el:0,last:0,acc:0,id:null};
-function clock(){var s=S.timer.mode==="P"?Math.max(0,Math.ceil(T.rem)):Math.floor(T.el),m=Math.floor(s/60);$("clk").textContent=(m>99?m:("0"+m).slice(-2))+":"+("0"+s%60).slice(-2);
-$("ph").textContent=(S.timer.mode==="P"?(T.phase==="focus"?"Focus":"Break"):"Stopwatch")+(T.run?" running":"")+" · "+(T.acc/3600).toFixed(2)+"h unlogged";$("go").textContent=T.run?"Pause":"Start"}
-function logAcc(){if(T.acc<30){say("Nothing to log yet. Run the timer first.");return false}var h=Math.round(T.acc/3600*100)/100;addH(S.week,S.sel,h);T.acc=0;say("Logged "+h.toFixed(2)+"h to "+cur().n+".");render();return true}
-function beep(){try{var a=new(window.AudioContext||window.webkitAudioContext)(),o=a.createOscillator();o.connect(a.destination);o.frequency.value=660;o.start();setTimeout(function(){o.stop()},400)}catch(e){}}
-function loop(){var n=Date.now(),d=(n-T.last)/1e3;T.last=n;
-if(S.timer.mode==="S"){T.el+=d;T.acc+=d}else{T.rem-=d;if(T.phase==="focus")T.acc+=d;
-if(T.rem<=0){T.run=false;clearInterval(T.id);if(T.phase==="focus"){logAcc();T.phase="break";T.rem=S.timer.brk*60;say("Focus complete and logged. Break time.")}else{T.phase="focus";T.rem=S.timer.focus*60;say("Break over. Ready for the next session.")}beep()}}clock()}
-$("go").onclick=function(){if(T.run){T.run=false;clearInterval(T.id)}else{T.run=true;T.last=Date.now();T.id=setInterval(loop,250)}clock()};
-$("rs").onclick=function(){T.run=false;clearInterval(T.id);T.phase="focus";T.rem=S.timer.focus*60;T.el=0;T.acc=0;clock()};
-$("lg").onclick=function(){if(logAcc()){if(S.timer.mode==="S")T.el=0;else if(T.phase==="focus"){T.rem=S.timer.focus*60}}clock()};
-$("mP").onclick=function(){S.timer.mode="P";save();updTgt();clock()};$("mS").onclick=function(){S.timer.mode="S";save();updTgt();clock()};
-$("fm").onchange=function(){S.timer.focus=Math.max(1,+this.value||25);save();if(!T.run&&T.phase==="focus")T.rem=S.timer.focus*60;clock()};
-$("bm").onchange=function(){S.timer.brk=Math.max(1,+this.value||5);save()};
-function doExport(){var j=JSON.stringify(S,null,2),b=new Blob([j],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="mission-control-backup.json";document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href)},2e3);try{navigator.clipboard.writeText(j)}catch(e){}say("Backup exported (also copied to the clipboard if allowed).")}
-$("exp").onclick=doExport;$("nexp").onclick=doExport;$("imp").onclick=function(){$("file").click()};
-$("file").onchange=function(){var f=this.files[0];if(!f)return;var r=new FileReader();r.onload=function(){try{var o=JSON.parse(r.result);for(var k in o)S[k]=o[k];save();buildCds();render();say("Backup imported.")}catch(e){say("That file is not a valid backup.")}};r.readAsText(f)};
-$("rst").onclick=function(){if(!confirm("Reset all hours, checkboxes and exam dates? Export a backup first if you want to keep them."))return;try{localStorage.removeItem(KEY)}catch(e){}S=fresh();T.acc=0;T.rem=1500;buildCds();render();say("All data reset.")};
-$("q").oninput=function(){if($("q").value)show("s-syl");filt()};
-function show(id){["s-dash","s-tm","s-syl","s-stats"].forEach(function(v){$(v).classList.toggle("on",v===id)});document.querySelectorAll("[data-go]").forEach(function(n){n.classList.toggle("on",n.dataset.go===id);n.setAttribute("aria-current",n.dataset.go===id?"page":"false")});S.view=id;save();window.scrollTo(0,0)}
-document.querySelectorAll("[data-go]").forEach(function(b){b.onclick=function(){show(b.dataset.go)}});
-function render(){var w=W[S.week],tot=total(S.week);buildTabs();$("wk").textContent=w.l+" · "+w.r+" · "+w.t;$("tot").textContent=f1(tot)+" / 50.0h";$("fgi").style.width=Math.min(100,tot/TOT*100)+"%";
-var p=pace();$("pace").textContent=p[0];$("paceS").textContent=p[1];buildStats();buildTh();buildSy();buildHist();updTgt();clock()}
-buildCds();render();tick();setInterval(tick,1000);show(S.view&&$(S.view)?S.view:"s-dash");
-})();
-</script>
-</body>
-</html>
+.hist{display:grid;grid-template-columns:90px repeat(5,1fr);gap:8px;align-items:center;font
